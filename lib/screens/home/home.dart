@@ -1,6 +1,6 @@
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:id_master/services/auth.dart';
+import 'package:id_master/shared/constants.dart';
 
 class Home extends StatelessWidget {
 
@@ -25,7 +25,106 @@ class Home extends StatelessWidget {
             ),
           ],
         ),
+        body: Container(
+            child: Column(
+            children: <Widget>[
+              Text(
+              "NAME",
+              style: TextStyle(
+                color: Colors.grey[800],
+                fontSize: 16 ,
+                fontWeight: FontWeight.w700,
+                letterSpacing: 2,
+              ),
+            ),
+
+            Text(
+              "AAYUSH GARG",
+              style: TextStyle(
+                color: kTextColor,
+                fontSize: 16 ,
+                fontWeight: FontWeight.w400,
+                letterSpacing: 1,
+              ),
+            ),
+            Text(
+              "PHONE NUMBER",
+              style: TextStyle(
+                color: kTextColor,
+                fontSize: 16 ,
+                fontWeight: FontWeight.w700,
+                letterSpacing: 2,
+              ),
+            ),
+            Text(
+              "9211420420",
+              style: TextStyle(
+                color: kTextColor,
+                fontSize: 16 ,
+                fontWeight: FontWeight.w400,
+                letterSpacing: 1,
+              ),
+            ),
+            Text(
+              "AGE",
+              style: TextStyle(
+                color: kTextColor,
+                fontSize: 16 ,
+                fontWeight: FontWeight.w700,
+                letterSpacing: 2,
+              ),
+            ),
+            Text(
+              "19",
+              style: TextStyle(
+                color: kTextColor,
+                fontSize: 16 ,
+                fontWeight: FontWeight.w400,
+                letterSpacing: 1,
+              ),
+            ),
+            Text(
+              "ADDRESS",
+              style: TextStyle(
+                color: kTextColor,
+                fontSize: 16 ,
+                fontWeight: FontWeight.w700,
+                letterSpacing: 2,
+              ),
+            ),
+            Text(
+              "9211",
+              style: TextStyle(
+                color: kTextColor,
+                fontSize: 16 ,
+                fontWeight: FontWeight.w400,
+                letterSpacing: 1,
+              ),
+            ),
+            Text(
+              "EMAIL ADDRESS",
+              style: TextStyle(
+                color: kTextColor,
+                fontSize: 16 ,
+                fontWeight: FontWeight.w700,
+                letterSpacing: 2,
+              ),
+            ),
+            Text(
+              "jo email ho",
+              style: TextStyle(
+                color: kTextColor,
+                fontSize: 16 ,
+                fontWeight: FontWeight.w400,
+                letterSpacing: 1,
+              ),
+            ),
+          ],
+        ),
       ),
+
+    ),
+
     );
   }
 }
