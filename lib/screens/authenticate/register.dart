@@ -8,23 +8,26 @@ class Register extends StatefulWidget {
   Register({ this.toggleView });
 
   @override
-  _RegisterState createState() => _RegisterState();
+  RegisterState createState() => RegisterState();
 }
 
-class _RegisterState extends State<Register> {
-
+class RegisterState extends State<Register> {
+  final myController = TextEditingController();
   final AuthService _auth = AuthService();
   final _formKey = GlobalKey<FormState>();
   String error = '';
 
   // text field state
-  String email = '';
+  static String email = '';
   String password = '';
+  static String fullname = '';
+  static String phone = '';
+  static String age = '';
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.yellow[400],
+      backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: Colors.green[500],
         elevation: 0.0,
@@ -45,10 +48,35 @@ class _RegisterState extends State<Register> {
             children: <Widget>[
               SizedBox(height: 20.0),
               TextFormField(
+                controller: myController,
+                decoration: textInputDecoration.copyWith(hintText: 'Full Name'),
+                validator: (val) => val.isEmpty ? 'Enter a Name' : null,
+                onChanged: (val) {
+                  setState(() => fullname = val);
+                },
+              ),
+              SizedBox(height: 20.0),
+              TextFormField(
                 decoration: textInputDecoration.copyWith(hintText: 'E-mail'),
                 validator: (val) => val.isEmpty ? 'Enter an email' : null,
                 onChanged: (val) {
                   setState(() => email = val);
+                },
+              ),
+              SizedBox(height: 20.0),
+              TextFormField(
+                decoration: textInputDecoration.copyWith(hintText: 'Phone Number'),
+                validator: (val) => val.isEmpty ? 'Enter a Phone number' : null,
+                onChanged: (val) {
+                  setState(() => phone = val);
+                },
+              ),
+              SizedBox(height: 20.0),
+              TextFormField(
+                decoration: textInputDecoration.copyWith(hintText: 'Age'),
+                validator: (val) => val.isEmpty ? 'Age' : null,
+                onChanged: (val) {
+                  setState(() => age = val);
                 },
               ),
               SizedBox(height: 20.0),

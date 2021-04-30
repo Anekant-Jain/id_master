@@ -1,10 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:id_master/services/auth.dart';
 import 'package:id_master/shared/constants.dart';
+import 'package:id_master/screens/authenticate/register.dart';
 
 class Home extends StatelessWidget {
 
   final AuthService _auth = AuthService();
+
+  static String pfullname = RegisterState.fullname;
+  String pemail = RegisterState.email;
+  String pphone = RegisterState.phone;
+  String page = RegisterState.age;
 
   @override
   Widget build(BuildContext context) {
@@ -31,6 +37,7 @@ class Home extends StatelessWidget {
               Text(
               "NAME",
               style: TextStyle(
+
                 color: Colors.grey[800],
                 fontSize: 16 ,
                 fontWeight: FontWeight.w700,
@@ -39,7 +46,7 @@ class Home extends StatelessWidget {
             ),
 
             Text(
-              "AAYUSH GARG",
+              "$pfullname",
               style: TextStyle(
                 color: kTextColor,
                 fontSize: 16 ,
@@ -57,7 +64,7 @@ class Home extends StatelessWidget {
               ),
             ),
             Text(
-              "9211420420",
+              "$pphone",
               style: TextStyle(
                 color: kTextColor,
                 fontSize: 16 ,
@@ -75,7 +82,7 @@ class Home extends StatelessWidget {
               ),
             ),
             Text(
-              "19",
+              "$page",
               style: TextStyle(
                 color: kTextColor,
                 fontSize: 16 ,
@@ -111,7 +118,7 @@ class Home extends StatelessWidget {
               ),
             ),
             Text(
-              "jo email ho",
+              "$pemail",
               style: TextStyle(
                 color: kTextColor,
                 fontSize: 16 ,

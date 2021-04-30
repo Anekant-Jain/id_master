@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:id_master/services/auth.dart';
 import 'package:id_master/shared/box.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:id_master/shared/constants.dart';
 
 class SignIn extends StatefulWidget {
 
